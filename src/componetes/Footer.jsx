@@ -1,7 +1,7 @@
 import { Container, Row, Col } from "react-bootstrap"
 
 import logo from "../assets/DevIcon.svg"
-import facebookIcon from "../assets/Facebook.svg"
+import facebookIcon from "../assets/facebook.svg"
 import xIcon from "../assets/X.svg"
 
 export default function Footer (){
