@@ -1,0 +1,24 @@
+name: React App Github pages deploy
+
+on:
+  push:
+    branch:
+      "main"
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+  
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install & build
+        run: npm ci && npm run build
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@4.1.1
+        with:
+          branch: current-deploy
+          folder: dist
